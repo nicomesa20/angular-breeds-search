@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "sass:map";
+@use "styles/material/theme" as theme;
+@use "app/app.component.theme" as app;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+app-root,
+.app-frame {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(43rem, 90%);
+  margin-inline: auto;
+
+  &--lg {
+    width: min(60rem, 90%);
+  }
+}
+
+.theme-dark {
+  @include mat.all-component-themes(theme.$app-dark-theme);
+  @include app.app-root-theme(theme.$app-dark-theme);
+}
+.theme-light {
+  @include mat.all-component-themes(theme.$app-theme);
+  @include app.app-root-theme(theme.$app-theme);
+}
+
+.mat-form-field-no-padding .mat-form-field-wrapper {
+  margin-bottom: -1.25em;
+}

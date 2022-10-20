@@ -1,0 +1,16 @@
+.gallery {
+  columns: 3 250px;
+  column-gap: 0.5rem;
+
+  &__item {
+    margin-bottom: 0.5rem;
+    outline: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

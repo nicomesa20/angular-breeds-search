@@ -1,0 +1,35 @@
+:host {
+  height: 100%;
+  display: block;
+}
+.content {
+  height: 50vh;
+  padding: 6rem 0;
+  box-sizing: border-box;
+  background-size: contain;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+
+.hero {
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  margin-bottom: 2rem !important;
+  line-height: 3rem !important;
+}
+
+.search {
+  padding: 1.3475rem 1.5rem 0 !important;
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  &__input {
+    flex: 1;
+  }
+}

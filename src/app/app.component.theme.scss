@@ -1,0 +1,17 @@
+@use "@angular/material" as mat;
+@use "sass:map";
+
+@mixin app-root-theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary-palette: map.get($color-config, "primary");
+  $accent-palette: map.get($color-config, "accent");
+
+  .content {
+    background: linear-gradient(
+        45deg,
+        rgba(mat.get-color-from-palette($primary-palette, lighter), 0.5),
+        rgba(mat.get-color-from-palette($accent-palette, lighter), 0.5)
+      ),
+      url("/assets/images/dog-background.jpg") center center no-repeat;
+  }
+}

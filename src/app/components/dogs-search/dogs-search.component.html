@@ -1,0 +1,7 @@
+<div class="container landing">
+  <h1 class="hero">Find your new best friend</h1>
+  <mat-card class="search">
+    <app-search-form *ngIf="breedsContext$ | async as breeds" [breeds]="breeds" (onSearch)="handleOnSearch($event)">
+    </app-search-form>
+  </mat-card>
+</div>
